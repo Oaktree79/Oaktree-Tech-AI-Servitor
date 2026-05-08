@@ -1,0 +1,7 @@
+{
+  "version": "1.2.0",
+  "zip_url": "https://example.com/releases/ai-serviter.zip",
+  "sha256": "REPLACE_WITH_SHA256",
+  "signature_url": "https://example.com/releases/ai-serviter.zip.sig",
+  "notes": "Installer production release."
+}
