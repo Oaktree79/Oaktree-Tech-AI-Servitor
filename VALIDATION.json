@@ -1,0 +1,17 @@
+{
+  "compile": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "pytest": {
+    "returncode": 0,
+    "stdout": "...........                                                              [100%]\n11 passed in 1.69s\n",
+    "stderr": ""
+  },
+  "main": {
+    "returncode": 0,
+    "stdout": "[info] app starting\n[storage-v1] put hello=world\n[storage-v1] get hello\n[info] read back: world\n[storage-v1] put obj={\"ready\": true}\n[storage-v1] get obj\n[info] json-capable: True\n[ai-serviter] summary: {'matrix': {'root': '/mnt/data/lattice-framework-ai-serviter-enterprise/python', 'files': 28, 'directories': 6, 'total_size_bytes': 53307, 'languages': {'json': 1, 'python': 25, 'toml': 1}}, 'symbol_count': 157, 'memory_documents': 28, 'security_findings': 3}\n",
+    "stderr": ""
+  }
+}

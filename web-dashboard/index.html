@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>AI Serviter Dashboard</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; background: #f7f7f7; }
+    .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; }
+    .card { background: white; padding: 1rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 1px 6px #ddd; }
+    input, textarea, button { font: inherit; padding: .5rem; margin: .25rem 0; width: 100%; box-sizing: border-box; }
+    button { cursor: pointer; }
+    pre { background: #111; color: #eee; padding: 1rem; border-radius: 8px; overflow: auto; min-height: 30rem; }
+  </style>
+</head>
+<body>
+  <h1>AI Serviter Dashboard</h1>
+  <div class="grid">
+    <div>
+      <div class="card">
+        <h2>Connection</h2>
+        <input id="base" value="http://127.0.0.1:8765"/>
+        <input id="username" value="admin"/>
+        <input id="password" type="password" placeholder="password"/>
+        <button onclick="login()">Login</button>
+        <input id="token" placeholder="Bearer token"/>
+      </div>
+      <div class="card">
+        <h2>Tasks</h2>
+        <textarea id="instruction" placeholder="analyze project"></textarea>
+        <button onclick="submitTask()">Submit Task</button>
+        <button onclick="loadTasks()">Load Tasks</button>
+        <button onclick="runWorker()">Run Worker Once</button>
+      </div>
+      <div class="card">
+        <h2>Operations</h2>
+        <button onclick="metrics()">Metrics</button>
+        <button onclick="latestCerts()">Latest Certificates</button>
+        <button onclick="gitStatus()">Git Status</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Output</h2>
+      <pre id="out">Ready.</pre>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

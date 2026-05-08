@@ -1,0 +1,15 @@
+{
+  "name": "lattice-framework-starter-ts",
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "test": "tsx --test tests/lattice.test.ts",
+    "watch": "tsx src/watch.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}

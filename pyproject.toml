@@ -1,0 +1,22 @@
+[project]
+name = "lattice-framework-ai-serviter-one-click"
+version = "1.1.0"
+description = "AI Serviter with one-click installer productization"
+requires-python = ">=3.10"
+
+[project.scripts]
+serviter-installer = "ai_serviter.installer_cli:main"
+serviter = "ai_serviter.cli:main"
+serviter-service = "ai_serviter.service:main"
+serviter-gui = "ai_serviter.gui_app:run_gui"
+serviter-prod = "ai_serviter.prod_cli:main"
+serviter-final = "ai_serviter.final_cli:main"
+serviter-one-click = "ai_serviter.one_click:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+gui = ["PyQt5>=5.15", "pandas>=2.0", "matplotlib>=3.7"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
