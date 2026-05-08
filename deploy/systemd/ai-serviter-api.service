@@ -1,0 +1,14 @@
+[Unit]
+Description=AI Serviter API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/ai-serviter/python
+Environment=SERVITER_ADMIN_PASSWORD=change-me
+ExecStart=/opt/ai-serviter/python/.venv/bin/serviter-service --root /opt/ai-serviter --mode api --host 0.0.0.0 --port 8765
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

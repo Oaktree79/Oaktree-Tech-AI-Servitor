@@ -1,0 +1,11 @@
+image:
+  repository: ai-serviter
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  port: 8765
+
+env:
+  SERVITER_ADMIN_PASSWORD: change-me
+  SERVITER_SECRET: change-this-secret

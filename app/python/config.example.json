@@ -1,0 +1,10 @@
+{
+  "modules": {
+    "storage-v1": {
+      "backend": "memory"
+    },
+    "logger": {
+      "level": "info"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "AI Serviter",
+  "schemaVersion": 39,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Queued Tasks",
+      "targets": [{"expr": "serviter_tasks_queued"}],
+      "gridPos": {"x": 0, "y": 0, "w": 6, "h": 4}
+    },
+    {
+      "type": "stat",
+      "title": "Succeeded Tasks",
+      "targets": [{"expr": "serviter_tasks_succeeded"}],
+      "gridPos": {"x": 6, "y": 0, "w": 6, "h": 4}
+    }
+  ]
+}

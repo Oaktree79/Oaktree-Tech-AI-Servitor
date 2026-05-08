@@ -1,0 +1,48 @@
+{
+  "exists": true,
+  "row_count": 1,
+  "headers": [
+    "Team",
+    "Order Ref",
+    "Order Label",
+    "Duration",
+    "Certificate Order Status",
+    "Signed Certificate",
+    "Signed Certificate Status",
+    "Effective Date",
+    "Expiration Date",
+    "Common Name",
+    "Organization Name",
+    "Locality",
+    "State",
+    "Country",
+    "SANs",
+    "Order Date",
+    "Certificate Serial Number",
+    "Certificate Request Date",
+    "Additional Email"
+  ],
+  "sample_rows": [
+    {
+      "Team": " ab3-1k5q8fk",
+      "Order Ref": "co-f21k8gcsfc0",
+      "Order Label": "Premium Multi-subdomain SSL",
+      "Duration": "730",
+      "Certificate Order Status": "waiting for csr",
+      "Signed Certificate": "",
+      "Signed Certificate Status": "",
+      "Effective Date": "",
+      "Expiration Date": "",
+      "Common Name": "",
+      "Organization Name": "",
+      "Locality": "",
+      "State": "",
+      "Country": "",
+      "SANs": "",
+      "Order Date": "2025-07-28 21:35:59 -0500",
+      "Certificate Serial Number": "",
+      "Certificate Request Date": "[]",
+      "Additional Email": "[]"
+    }
+  ]
+}

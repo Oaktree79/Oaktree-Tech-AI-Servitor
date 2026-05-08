@@ -1,0 +1,15 @@
+services:
+  ai-serviter:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile
+    ports:
+      - "8765:8765"
+    environment:
+      SERVITER_ADMIN_PASSWORD: change-me
+      SERVITER_SECRET: change-this-secret
+    volumes:
+      - serviter-data:/app/python/.serviter
+
+volumes:
+  serviter-data:

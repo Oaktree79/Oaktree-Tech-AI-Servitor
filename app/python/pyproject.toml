@@ -1,0 +1,18 @@
+[project]
+name = "lattice-framework-ai-serviter-iso-integrated"
+version = "0.6.0"
+description = "Closed-loop autonomous AI Serviter with ISO/VM/installer packaging"
+requires-python = ">=3.10"
+
+[project.scripts]
+serviter = "ai_serviter.cli:main"
+serviter-service = "ai_serviter.service:main"
+serviter-gui = "ai_serviter.gui_app:run_gui"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+gui = ["PyQt5>=5.15", "pandas>=2.0", "matplotlib>=3.7"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-serviter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-serviter
+  template:
+    metadata:
+      labels:
+        app: ai-serviter
+    spec:
+      containers:
+        - name: ai-serviter
+          image: ai-serviter:latest
+          ports:
+            - containerPort: 8765
+          env:
+            - name: SERVITER_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ai-serviter-secret
+                  key: admin-password
+            - name: SERVITER_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ai-serviter-secret
+                  key: token-secret
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-serviter
+spec:
+  selector:
+    app: ai-serviter
+  ports:
+    - port: 8765
+      targetPort: 8765

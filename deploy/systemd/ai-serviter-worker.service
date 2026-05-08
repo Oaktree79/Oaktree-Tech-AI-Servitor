@@ -1,0 +1,13 @@
+[Unit]
+Description=AI Serviter Worker
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/ai-serviter/python
+ExecStart=/opt/ai-serviter/python/.venv/bin/serviter-service --root /opt/ai-serviter --mode worker --interval 2
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

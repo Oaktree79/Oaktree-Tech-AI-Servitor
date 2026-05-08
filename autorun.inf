@@ -1,0 +1,4 @@
+[autorun]
+label=AI Serviter
+open=setup.bat
+icon=setup.bat,0

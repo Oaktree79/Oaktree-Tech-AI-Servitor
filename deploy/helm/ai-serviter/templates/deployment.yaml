@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-serviter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-serviter
+  template:
+    metadata:
+      labels:
+        app: ai-serviter
+    spec:
+      containers:
+        - name: ai-serviter
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.port }}
+          env:
+            - name: SERVITER_ADMIN_PASSWORD
+              value: "{{ .Values.env.SERVITER_ADMIN_PASSWORD }}"
+            - name: SERVITER_SECRET
+              value: "{{ .Values.env.SERVITER_SECRET }}"
